@@ -4,7 +4,7 @@ $(function () {
     $('#title').on('keydown', function (e) {
         if (e.keyCode === 13) {
             if ($(this).val() === "") {
-                alert("请输入");
+                alert("请输入待办事项");
             } else {
                 // 读取本地存储原来的数据
                 var local = getData();
@@ -20,7 +20,6 @@ $(function () {
     });
     // 删除操作
     $('ol,ul').on("click", "a", function () {
-        alert(11)
         // 先获取本地存储
         var data = getData();
         console.log(data);
